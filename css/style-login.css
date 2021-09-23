@@ -1,0 +1,96 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+.background-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #cbdce9;
+    width: 100vw;
+    height: 100vh;
+}
+
+.card {
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgb(0 0 0 / 38%), 0 2px 4px 0 rgb(0 0 0 / 18%);
+    width: 400px;
+}
+
+.card-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px 20px;
+}
+
+.card-body .title {
+    color: #005078;
+    font-size: 25px;
+    font-weight: bold;
+    font-family: sans-serif;
+    margin-bottom: 10px;
+}
+
+.card-body #register-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+.card-body .form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+.card-body .form-container .text-input {
+    border: 1.5px solid #6e6e6e;
+    border-radius: 4.5px;
+    font-size: 15px;
+    font-weight: normal;
+    margin-bottom: 17px;
+    width: 290px;
+    padding: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+    resize: none;
+}
+
+.card-body .form-container .textarea {
+    height: 100px;
+}
+
+
+.card-body .submit-input {
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight:bolder;
+    margin-bottom: 16px;
+    width: 205px;
+    padding: 11px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #135580;
+    color: white;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.card-body .submit-input:hover {
+    background-color: #065484;
+}
+
+.card-body .paragraph {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    color:#222324;
+
+}
