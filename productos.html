@@ -7,8 +7,10 @@
     <title>LeftyBoxes - Productos</title>
 
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style-producto.css">
     <script src="https://kit.fontawesome.com/f0f6311dd7.js" crossorigin="anonymous"></script>
-    <script defer src="index.js"></script>
+    <script defer src="index.js"></script>    
+	<script src="script.js"></script>
 </head>
 <body>
     <header class="header">
@@ -26,19 +28,19 @@
                 <li class="nav-menu-item"><a href="#" class="nav-menu-link nav-link">Cajas para regalo</a></li>
                 <li class="nav-menu-item"><a href="contacto.html" class="nav-menu-link nav-link">Contacto</a></li>
                 <li class="nav-menu-item"><a href="conocenos.html" class="nav-menu-link nav-link">Conócenos</a></li>
-                <li><a href="#">
+                <li class="nav-menu-item"><a href="#">
                     <button class="buttons firstbutton">
                         <i class="fas fa-search"></i>
                     </button>
                 </a>
                 </li>
-                <li><a href="login.html">
+                <li class="nav-menu-item"><a href="registro.html">
                     <button class="buttons">
                         <i class="fas fa-user"></i>
                     </button>
                 </a>
                 </li>
-                <li><a href="#">
+                <li class="nav-menu-item"><a href="#">
                     <button class="buttons">
                         <i class="fas fa-shopping-bag"></i>
                     </button>
@@ -46,7 +48,32 @@
                 </li>            
             </ul>
         </nav>
+        <div class="linea"></div>
     </header>
-    <div class="linea"></div>
+    
+    <div class="wrap">
+		<h2>Escoge un producto</h2>
+		<div class="store-wrapper">
+			<div class="category_list">
+				<a href="#" class="category_item" category="all">Todo</a>
+				<a href="#" class="category_item" category="vino">Cajas para vino</a>
+				<a href="#" class="category_item" category="cerveza">Porta cerveza</a>
+				<a href="#" class="category_item" category="regalo">Cajas para regalo</a>
+				<a href="#" class="category_item" category="posab">Posa botellas</a>
+				<a href="#" class="category_item" category="deco">Decoración</a>
+			</div>
+			<section class="products-list">
+				<div class="product-item" category="vino">
+					<img src="imagenes/caja_vino/IMG-20200703-WA0007.jpg" alt="" style="width:100%">
+					<!--a href="#"></a-->
+				</div>
+				<div class="product-item" category="vino">
+					<img src="imagenes/caja_vino_div/IMG-20200701-WA0019.jpg" alt="" style="width:100%">					
+				</div>				
+				
+			</section>
+		</div>
+	</div>
+
 </body>
 </html>
