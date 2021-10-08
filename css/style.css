@@ -18,7 +18,7 @@ img {
     width: 100%;    
     top: 0;
     left: 0;     
-    position: absolute;       
+    position: fixed;       
 }
 
 .banner{
@@ -86,7 +86,7 @@ img {
 
 .nav-menu {
     display: flex;
-    margin-right: 60px;
+    margin-left: 178px;
     list-style: none;        
 }
 
@@ -97,6 +97,7 @@ img {
     text-transform: uppercase;
     width: max-content;
 }
+
 
 .nav-menu-link {
     padding: 8px 12px;
@@ -123,7 +124,7 @@ img {
 }
 
 .categorias {
-    padding-bottom: 5%;    
+    padding-bottom: 3%;    
     text-align: center;
     color:#005078;
     font-size: 20px;
@@ -167,7 +168,8 @@ img {
     }
 
     .header {        
-        height: 60px;           
+        height: 60px; 
+        position: fixed;          
     }
     .nav {
         background-color: white;
