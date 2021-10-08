@@ -123,7 +123,7 @@ img {
 }
 
 .categorias {
-    padding-bottom: 5%;
+    padding-bottom: 5%;    
     text-align: center;
     color:#005078;
     font-size: 20px;
@@ -148,7 +148,7 @@ img {
 }
  
 .responsive {
-    padding: 0 10px;
+    padding: 8px 10px;
     float: left;
     width: 24.99999%;
 }
