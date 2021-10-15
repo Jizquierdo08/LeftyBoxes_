@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+    
     <meta charset="UTF-8">
     <title>Registro</title>
     <link rel="stylesheet" href="css/style-login.css">
@@ -14,6 +15,12 @@
     <link rel="stylesheet" href="css/style-cuadrado.css">
     <link rel="stylesheet" href="css/style-footer.css">
     <script src="https://kit.fontawesome.com/f0f6311dd7.js" crossorigin="anonymous"></script>
+    <script src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
+
+    <style>
+       #form label{float:left; width:140px;}
+       #error_msg{color:red; font-family:Arial, Helvetica, sans-serif; font-weight:bold; margin-bottom: 10px;}
+    </style>
     <script defer src="index.js"></script>
 </head>
 <body>
@@ -53,28 +60,75 @@
     <div class="background-container">
         <div class="card">
             <div class="card-body">
-                
+ 
                 <h1 class="title">REGISTRO</h1>
-                <form id="register-form" method="POST">
+                <form id="register-form" name="f1" action="registrar.php" method="POST">
                     <div class="form-container">
                         <input class="text-input"
-                            type="text" placeholder="Nombre completo">
+                            type="text" name="nombre" placeholder="Nombre" required>
                         <input class="text-input"
-                            type="text" placeholder="Email">
-                        <input class="text-input"
-                            type="password" placeholder="Contraseña">
-                        <input class="text-input"
-                            type="password" placeholder="Confirma contraseña">
+                            type="email" name="email" placeholder="Email" required>
+                        <input class="text-input" name="pass" id="pass"
+                            type="password" placeholder="Contraseña" min="6" max="10" required>
+                        <input class="text-input" name="conf_pass" id="conf_pass"
+                            type="password" placeholder="Confirma contraseña"  min="6" max="10" required>
                     </div>
-                    <input class="submit-input" 
-                        type="submit" value="Crear cuenta">
+                    <input class="submit-input" id="button-crear" name="crear"
+                        type="submit" value="Crear cuenta" >
                 </form>
                 <p class="paragraph">
-                    ¿Ya tienes una cuenta?<a href="login.html">Log in</a>
+                    ¿Ya tienes una cuenta?<a href="login.php">Log in</a>
                 </p>
             </div>
         </div>
 
     </div>
 </body>
+<script>
+    $(document).ready(function(){
+        var $submitBtn = $("#register-form input[type='submit']");
+        var $passwordBox = $("#pass");
+        var $confirmBox = $("#conf_pass");
+        var $errorMsg =  $('<span id="error_msg">Las contraseñas no coinciden.</span>');
+
+        // This is incase the user hits refresh - some browsers will maintain the disabled state of the button.
+        $submitBtn.removeAttr("disabled");
+
+        function checkMatchingPasswords(){
+            if($confirmBox.val() != "" && $passwordBox.val != ""){
+                if( $confirmBox.val() != $passwordBox.val() ){
+                    $submitBtn.attr("disabled", "disabled");
+                    $errorMsg.insertAfter($confirmBox);
+                }
+            }
+        }
+
+        function resetPasswordError(){
+            $submitBtn.removeAttr("disabled");
+            var $errorCont = $("#error_msg");
+            if($errorCont.length > 0){
+                $errorCont.remove();
+            }  
+        }
+
+
+        $("#conf_pass, #pass")
+             .on("keydown", function(e){
+                /* only check when the tab or enter keys are pressed
+                 * to prevent the method from being called needlessly  */
+                if(e.keyCode == 13 || e.keyCode == 9) {
+                    checkMatchingPasswords();
+                }
+             })
+             .on("blur", function(){                    
+                // also check when the element looses focus (clicks somewhere else)
+                checkMatchingPasswords();
+            })
+            .on("focus", function(){
+                // reset the error message when they go to make a change
+                resetPasswordError();
+            })
+
+    });
+    </script>
 </html>

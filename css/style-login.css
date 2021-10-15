@@ -75,11 +75,16 @@
     color: #858383;
 }
 
+
+
+
+
 .card-body .submit-input {
     border-radius: 4px;
     font-size: 17.1px;
     letter-spacing: -0.5px;
     font-weight:bolder;
+    margin-top: 60px;
     margin-bottom: 20px;
     width: 200px;
     padding: 10px 9px;
@@ -96,8 +101,11 @@
     background-color: #0a68a3;
 }
 
+
+
 .card-body .paragraph {
     font-family: courier;
     font-size: 15px;
     color:#2e2f30;
 }
+

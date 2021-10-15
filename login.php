@@ -1,3 +1,8 @@
+<?php
+    session_start();
+    $error = isset($_SESSION['error']) ? $_SESSION['error'] : false;
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -54,11 +59,11 @@
         <div class="card">
             <div class="card-body">
                 <h1 class="title">Bienvenido</h1>
-                <form id="login-form" method="POST">
+                <form id="login-form" action="validacion.php" method="POST">
                     <div class="form-container">
-                        <input class="text-input"
+                        <input class="text-input" name="email"
                             type="text" placeholder="Email">
-                        <input class="text-input"
+                        <input class="text-input" name="pass"
                             type="password" placeholder="Contraseña">
                     </div>
                     <input class="submit-input" 
@@ -70,3 +75,6 @@
     </div>
 </body>
 </html>
+<?php
+    $_SESSION['error'] = false;
+?>
