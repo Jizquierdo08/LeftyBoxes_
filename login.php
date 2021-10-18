@@ -59,7 +59,7 @@
         <div class="card">
             <div class="card-body">
                 <h1 class="title">Bienvenido</h1>
-                <form id="login-form" action="validacion.php" method="POST">
+                <form id="login-form" action="validacion.php" method="POST">                
                     <div class="form-container">
                         <input class="text-input" name="email"
                             type="text" placeholder="Email">
