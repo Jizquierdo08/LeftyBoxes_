@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/slide.css">
     <link rel="stylesheet" href="css/style-empaque.css">
-    <link rel="stylesheet" href="css/style-cuadrado.css">
+
     <link rel="stylesheet" href="css/style-footer.css">
     <script src="https://kit.fontawesome.com/f0f6311dd7.js" crossorigin="anonymous"></script>
     <script defer src="index.js"></script>
@@ -61,7 +61,7 @@
                 <h1 class="title">Bienvenido</h1>
                 <form id="login-form" action="validacion.php" method="POST">                
                     <div class="form-container">
-                        <input class="text-input" name="email"
+                        <input class="text-input" name="email"                                                                                                                                                                  "
                             type="text" placeholder="Email">
                         <input class="text-input" name="pass"
                             type="password" placeholder="Contraseña">

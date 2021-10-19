@@ -2,18 +2,18 @@
 session_start();
 
 $email = $_POST["email"];
-$pass = $_POST["pass"];
+$pass =  $_POST["pass"];
 
-$dbserver = "localhost";
+$dbservername = "localhost";
 $dbusername = "usuario";
-$dbpass = 'root';
-$dbname = 'leftyboxes';
+$dbpassword = "root";
+$dbname = "leftyboxes";
 
 
 $check = true;
 
 // Create connection
-$conn = new mysqli($dbserver, $dbusername, $dbpass, $dbname);
+$conn = new mysqli($dbservername, $dbusername,$dbpassword, $dbname);
 
 // Check connection
 if (!$conn->connect_error) {
@@ -26,8 +26,8 @@ if (!$conn->connect_error) {
     if ($result->num_rows > 0) {
         $row = $result->fetch_assoc();
         $_SESSION["error"] = false;
-        $_SESSION["nombre"] = $row["nombre_cliente"];
-        $_SESSION["email"] = $row["email"];
+        $_SESSION["name"] = $row["nombre_cliente"];
+        $_SESSION["correo"] = $row["email"];
         header("Location: http://localhost/Lefty/index.html");
         $check = false;
     }
@@ -35,7 +35,7 @@ if (!$conn->connect_error) {
 
 if ($check && isset($_SERVER["HTTP_REFERER"])) {
     $_SESSION["error"] = true;
-    header("Location: " . $_SERVER["HTTP_REFERER"]);
+    header("Location: http://google.com" );
 } else {
     echo  'Ocurrió un error';
 }
