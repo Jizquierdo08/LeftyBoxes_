@@ -28,7 +28,7 @@ img {
     height: 35px;
     top:0;
     left: 0;
-    width: auto;    
+    width: 100%;    
 }
 
 .banner p{
@@ -186,6 +186,7 @@ img {
     }
 
     .header {        
+        share
         height: 60px; 
         position: fixed;          
     }
@@ -244,7 +245,7 @@ img {
     .banner{
         background-color: #89aac0 ;
         height: calc(100%-30px);
-        width: auto;     
+        width: 100%;     
     }
     
     .buttons{        
