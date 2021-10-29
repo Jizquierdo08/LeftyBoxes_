@@ -1,156 +1,174 @@
-*{
+:root {
+	--black: #3a3a3a;
+	--white: #fff;
+	--green: #49b293;
+  }
+  
+  * {
 	margin: 0;
 	padding: 0;
-	box-sizing: border-box;
-}
-
-body{
-	background: white;
-	font-family: courier;
-}
-
-.wrap{
-	max-width: 1100px;
-	width: 100%;
-  padding-top: 14%;
-	margin: auto;
-}
-
-.wrap > h2{
-	color: #085888;	
-	display: flex;
-	flex-direction: column;
-	text-align: center;      
-	margin: 15px 0px 30px 0;
-}
-
-
-.store-wrapper{
-	display: flex;
-	flex-wrap: wrap;
-}
-
-.category_list{
-	display: flex;
-	flex-direction: column;
-	width: 15%;
-}
-
-.category_list .category_item{
+  }
+  
+  .posts img {
 	display: block;
-	width: 90%;
-	padding: 20px 0;
-	margin-bottom: 20px;
-	background: #286890;
-	text-align: center;
+	width: auto;
+	height: 270px;
+	padding-left: 10%;		
+  }
+  
+  ol {
+	list-style: none;
+  }
+  
+  a {
 	text-decoration: none;
-	color: #fff;
-}
+	color: inherit;
+  }
+  
+  body {
+	margin: 50px 0;
+  }
+  
+  .author-archive {
+	padding: 8%;
+  }
+  
+  .filtro {
+	max-width: 1200px;
+	margin: 0 auto;
+  }
+  
+  .filtro h1 {
+	text-align: center;
+	margin-bottom: 2rem;
+	color:#005078;
+	font-size: 25px;
+  }
+  
+  .filtro h1 a {
+	transition: Todos 0.1s;
+  }
+  
+  input[type="radio"] {
+	position: absolute;
+	left: -9999px;
+  }
 
-.category_list .ct_item-active{
-	background: #a8c8d8;
-  color:black;
-}
-
-
-.products-list{
-	width: 85%;
-	display: flex;
-	flex-wrap: wrap;
-  text-align: center;
-  padding: 20px 5px;
-}
-
-
-.products-list .product-item{
-	width: 30%;
-  background-color: white;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  margin-bottom: 25px;
-  margin-left: 3%;
-}
-
-.products-list .product-item img{
-	width: 120%;
-  height: 250px;
-  object-fit: contain;
-}
-
-.products-list .product-item a{
-	display: block;
-	width: 100%;
-	padding: 8px 0;
-	background: #88b0d0;
-
+  .filters {
+	text-align: center;
+	margin-bottom: 2rem;
+  }
+  
+  .filters * {
+	display: inline-block;
+  }
+  
+  .filters label {
+	padding: 0.5rem 1rem;
+	margin-bottom: 0.25rem;
+	border-radius: 2rem;
+	min-width: 50px;
+	line-height: normal;
+	cursor: pointer;
+	transition: Todos 0.1s;
+  }
+  
+  .filters label:hover {
+	background: #c0e0e8;
 	color: black;
-	text-align: center;
-	text-decoration: none;
-}
+  }
+  
+  .posts {
+	display: grid;
+	grid-gap: 1.5rem;
+	grid-template-columns: repeat(4, 1fr);		
+  }
+  
+  .posts .post {	
+	background: white;
+	border: 1px solid rgba(0, 0, 0, 0.1);
+	width: 100%;
+	height: auto;
+  }
+  
+  .posts .post-title {
+	font-size: 1.3rem;
+  }
+  
+  .posts .post-title:hover {
+	text-decoration: underline;
+  }
+  
+  .posts figcaption {
+	padding: 1rem;
+  }
+  
+  .posts .post-categories {
+	margin-bottom: 0.75rem;
+	font-size: 0.75rem;
+  }
+  
+  .posts .post-categories * {
+	display: inline-block;
+  }
+  
+  .posts .post-categories li {
+	margin-bottom: 0.2rem;
+  }
+  
+  .posts .post-categories a {
+	padding: 0.2rem 0.5rem;
+	border-radius: 1rem;
+	border: 1px solid;
+	line-height: normal;
+	transition: Todos 0.1s;
+  }
+  
+  .posts .post-categories a:hover {
+	background: #c0e0e8;
+	color: black;
+  }
 
-
-
-@media screen and (max-width: 1100px){
-	.products-list .product-item{
-		width: 30.3%;
+  [value="Todos"]:checked ~ .filters [for="Todos"],
+  [value="Botella"]:checked ~ .filters [for="Botella"],
+  [value="Regalo"]:checked ~ .filters [for="Regalo"],
+  [value="Porta_cerveza"]:checked ~ .filters [for="Porta_cerveza"],
+  [value="Cofre"]:checked ~ .filters [for="Cofre"],
+  [value="Miniatura"]:checked ~ .filters [for="Miniatura"],
+  [value="Posa_botella"]:checked ~ .filters [for="Posa_botella"],
+  [value="Servilletero"]:checked ~ .filters [for="Servilletero"],
+  [value="Canasta"]:checked ~ .filters [for="Canasta"] {
+	background: #c0e0e8;
+	color: black;
+  }
+  
+  [value="Todos"]:checked ~ .posts [data-category] {
+	display: block;
+  }
+  
+  [value="Botella"]:checked ~ .posts .post:not([data-category~="Botella"]),
+  [value="Regalo"]:checked ~ .posts .post:not([data-category~="Regalo"]),
+  [value="Porta_cerveza"]:checked ~ .posts .post:not([data-category~="Porta_cerveza"]),
+  [value="Cofre"]:checked ~ .posts .post:not([data-category~="Cofre"]),
+  [value="Miniatura"]:checked ~ .posts .post:not([data-category~="Miniatura"]),
+  [value="Posa_botella"]:checked ~ .posts .post:not([data-category~="Posa_botella"]),
+  [value="Servilletero"]:checked ~ .posts .post:not([data-category~="Servilletero"]),
+  [value="Canasta"]:checked ~ .posts .post:not([data-category~="Canasta"]) {
+	display: none;
+  }
+  
+  @media screen and (max-width: 900px) {
+	.posts {
+	  grid-template-columns: repeat(3, 1fr);
 	}
-}
-
-@media screen and (max-width: 900px){
-	.category_list,
-	.products-list{
-		width: 100%;
+  }
+  
+  @media screen and (max-width: 650px) {
+	html {
+	  font-size: 14px;
 	}
-
-	.category_list{
-		flex-direction: row;
-		justify-content: space-between;
+  
+	.posts {
+	  grid-template-columns: repeat(2, 1fr);
 	}
-
-	.category_list .category_item{
-		align-self: flex-start;
-		width: 15%;
-		font-size: 14px;
-	}
-
-	.products-list .product-item{
-		margin-left: 4.5%;
-	}
-
-	.products-list .product-item:nth-child(3n+1){
-		margin-left: 0px;
-	}
-}
-
-@media screen and (max-width: 700px){
-	.category_list{
-		flex-direction: column;
-	}
-	.category_list .category_item{
-		width: 100%;
-		margin-bottom: 10px;
-	}
-}
-
-@media screen and (max-width: 600px){
-
-	.products-list .product-item{
-		width: 47.5%;
-	}
-
-	.products-list .product-item:nth-child(3n+1){
-		margin-left: 4.5%;
-	}
-
-	.products-list .product-item:nth-child(2n+1){
-		margin-left: 0px;
-	}
-
-}
-
-@media screen and (max-width: 350px){
-	.products-list .product_item{
-		width: 100%;
-		margin-left: 0px;
-	}
-}
-
+  }

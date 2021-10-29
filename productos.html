@@ -8,72 +8,197 @@
 
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/style-producto.css">
+    <link rel="stylesheet" href="css/style-footer.css">
     <script src="https://kit.fontawesome.com/f0f6311dd7.js" crossorigin="anonymous"></script>
     <script defer src="index.js"></script>    
 	<script src="script.js"></script>
 </head>
 <body>
-    <header class="header">
-        <div class="banner">
-            <p>¡Conoce todo lo nuevo que tenemos para ti!</p>
-        </div>
-        <nav class="nav">
-            <a href="index.html" class="logo "><img src="imagenes/logo.jpg" alt="LeftyBoxes"></a>
-            <button class="nav-toggle" aria-label="Abrir Menú">
-                <i class="fas fa-bars"></i>
-            </button>
-            <ul class="nav-menu">
-                <li class="nav-menu-item"><a href="index.html" class="nav-menu-link nav-link">Inicio</a></li>
-                <li class="nav-menu-item"><a href="productos.html" class="nav-menu-link nav-link nav-menu-link_active">Todos los Productos</a></li>
-                <li class="nav-menu-item"><a href="#" class="nav-menu-link nav-link">Cajas para regalo</a></li>
-                <li class="nav-menu-item"><a href="contacto.html" class="nav-menu-link nav-link">Contacto</a></li>
-                <li class="nav-menu-item"><a href="conocenos.html" class="nav-menu-link nav-link">Conócenos</a></li>
-                <li class="nav-menu-item"><a href="#">
-                    <button class="buttons firstbutton">
-                        <i class="fas fa-search"></i>
-                    </button>
-                </a>
-                </li>
-                <li class="nav-menu-item"><a href="registro.html">
-                    <button class="buttons">
-                        <i class="fas fa-user"></i>
-                    </button>
-                </a>
-                </li>
-                <li class="nav-menu-item"><a href="#">
-                    <button class="buttons">
-                        <i class="fas fa-shopping-bag"></i>
-                    </button>
-                </a>
-                </li>            
-            </ul>
-        </nav>
-        <div class="linea"></div>
-    </header>
-    
-    <div class="wrap">
-		<h2>Escoge un producto</h2>
-		<div class="store-wrapper">
-			<div class="category_list">
-				<a href="#" class="category_item" category="all">Todo</a>
-				<a href="#" class="category_item" category="vino">Cajas para vino</a>
-				<a href="#" class="category_item" category="cerveza">Porta cerveza</a>
-				<a href="#" class="category_item" category="regalo">Cajas para regalo</a>
-				<a href="#" class="category_item" category="posab">Posa botellas</a>
-				<a href="#" class="category_item" category="deco">Decoración</a>
-			</div>
-			<section class="products-list">
-				<div class="product-item" category="vino">
-					<img src="imagenes/caja_vino/IMG-20200703-WA0007.jpg" alt="" style="width:100%">
-					<!--a href="#"></a-->
-				</div>
-				<div class="product-item" category="vino">
-					<img src="imagenes/caja_vino_div/IMG-20200701-WA0019.jpg" alt="" style="width:100%">					
-				</div>				
-				
-			</section>
-		</div>
-	</div>
+  <header class="header">
+    <div class="banner">
+        <p>¡Conoce todo lo nuevo que tenemos para ti!</p>
+    </div>        
+    <nav class="nav">
+        <a href="index.html" class="logo "><img src="imagenes/logo.jpg" alt="LeftyBoxes"></a>
+        <button class="nav-toggle" aria-label="Abrir Menú">
+            <i class="fas fa-bars"></i>
+        </button>
+        <ul class="nav-menu">
+            <li class="nav-menu-item"><a href="index.html" class="nav-menu-link nav-link">Inicio</a></li>
+            <li class="nav-menu-item"><a href="productos.html" class="nav-menu-link nav-link nav-menu-link_active">Productos</a></li>
+            <li class="nav-menu-item"><a href="contacto.html" class="nav-menu-link nav-link">Contacto</a></li>
+            <li class="nav-menu-item"><a href="conocenos.html" class="nav-menu-link nav-link">Conócenos</a></li>
+            <li class="nav-menu-item"><a href="#">
+        </ul>            
+        <ul class="icons">
+          <li class="nav-menu-item"><a href="registro.html">
+              <button class="buttons">
+                  <i class="fas fa-user"></i>
+              </button>
+          </a>
+          </li>
+          <li class="nav-menu-item"><a href="#">
+              <button class="buttons">
+                  <i class="fas fa-shopping-bag"></i>
+              </button>
+          </a>
+          </li>
+      </ul>
+    </nav>       
+</header>
 
+<section class="author-archive">
+  <div class="filtro">
+    <h1>Nuestros productos</h1>
+    <input type="radio" id="Todos" name="categories" value="Todos" checked>
+    <input type="radio" id="Botella" name="categories" value="Botella">
+    <input type="radio" id="Regalo" name="categories" value="Regalo">
+    <input type="radio" id="Porta_cerveza" name="categories" value="Porta cerveza">
+    <input type="radio" id="Cofre" name="categories" value="Cofre">
+    <input type="radio" id="Miniatura" name="categories" value="Miniatura">
+    <input type="radio" id="Posa_botella" name="categories" value="Posa botella">
+    <input type="radio" id="Servilletero" name="categories" value="Servilletero">
+    <input type="radio" id="Canasta" name="categories" value="Canasta">
+
+    <ol class="filters">
+      <li>
+        <label for="Todos">Todos</label>
+      </li>
+      <li>
+        <label for="Botella">Botella</label>
+      </li>
+      <li>
+        <label for="Regalo">Regalo</label>
+      </li>
+      <li>
+        <label for="Porta_cerveza">Porta cerveza</label>
+      </li>
+      <li>
+        <label for="Cofre">Cofre</label>
+      </li>
+      <li>
+        <label for="Miniatura">Miniatura</label>
+      </li>
+      <li>
+        <label for="Posa_botella">Posa botella</label>
+      </li>
+      <li>
+        <label for="Servilletero">Servilletero</label>
+      </li>
+      <li>
+        <label for="Canasta">Canasta</label>
+      </li>
+    </ol>
+
+    <ol class="posts">
+      <li class="post" data-category="Botella">
+        <article>
+          <figure>
+            <a href="#" target="_blank"><img src="/imagenes/caja_botellas/caja_botella_div/1.jpg" alt=""></a>
+            <figcaption>
+              <ol class="post-categories">
+                <li><a href="">Botella</a></li>
+              </ol>
+              <h2 class="post-title">
+                <a href="#" target="_blank">Caja para botella con 4 divisiones</a>
+              </h2>
+            </figcaption>
+          </figure>
+        </article>
+      </li>
+      <li class="post" data-category="Botella Cofre">
+        <article>
+          <figure>
+            <a href="#" target="_blank"><img src="/imagenes/caja_botellas/caja_cofre/4.jpg" alt=""></a>
+            <figcaption>
+              <ol class="post-categories">
+                <li><a href="">Botella</a></li>
+                <li><a href="">Cofre</a></li>
+              </ol>
+              <h2 class="post-title">
+                <a href="#" target="_blank">Caja tipo cofre para vino</a>
+              </h2>
+            </figcaption>
+          </figure>
+        </article>
+      </li>
+      <li class="post" data-category="Botella">
+        <article>
+          <figure>
+            <a href="#" target="_blank"><img src="/imagenes/caja_botellas/caja_vino_div/3.jpg" alt=""></a>
+            <figcaption>
+              <ol class="post-categories">
+                <li><a href="">Botella</a></li>
+              </ol>
+              <h2 class="post-title">
+                <a href="#" target="_blank">Caja para vino con 2 divisiones</a>
+              </h2>
+            </figcaption>
+          </figure>
+        </article>
+      </li>
+      <li class="post" data-category="Botella">
+        <article>
+          <figure>
+            <a href="#" target="_blank"><img src="/imagenes/caja_botellas/caja_vino/11.jpg" alt=""></a>
+            <figcaption>
+              <ol class="post-categories">
+                <li><a href="">Botella</a></li>
+              </ol>
+              <h2 class="post-title">
+                <a href="#" target="_blank">Caja para vino</a>
+              </h2>
+            </figcaption>
+          </figure>
+        </article>
+      </li>
+      <!--li class="post" data-category="Regalo">...</li>
+      <li class="post" data-category="Porta_cerveza">...</li>
+      <li class="post" data-category="Cofre">...</li>
+      <li class="post" data-category="Miniatura">...</li>
+      <li class="post" data-category="Posa_botella">...</li>
+      <li class="post" data-category="Servilletero">...</li>
+      <li class="post" data-category="Canasta">...</li!-->
+     </ol>
+  </div>
+</section>
+
+    <footer>
+        <div class="content">
+          <div class="left box">
+            <div class="upper">
+              <div class="topic">Sobre nosotros</div>
+              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+            </div>
+            <div class="lower">
+              <div class="topic">Contáctanos</div>
+              <div class="phone">
+                <a href="#"><i class="fas fa-phone-volume"></i>000 0000 0000</a>
+              </div>
+              <div class="email">
+                <a href="#"><i class="fas fa-envelope"></i>leftyboxes@gmail.com</a>
+              </div>
+            </div>
+          </div>
+          <div class="middle box">
+            <div class="topic">Nuestros Servicios</a></div>
+            <div><a href="#">Cajas para regalo</a></div>
+            <div><a href="#">Centros de mesa</a></div>
+            <div><a href="#">Empaques para tu producto</a></div>
+            <div><a href="#">Modelos personalizados y más</a></div>
+          </div>
+          <div class="right box">
+            <div class="topic">¿Quieres recibir ofertas?</div>
+            <form action="#">
+              <input type="text" placeholder="Enter email address">
+              <input type="submit" name="" value="Send">
+              <div class="media-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+              </div>
+            </form>
+          </div>
+        </div>
+      </footer>
 </body>
 </html>

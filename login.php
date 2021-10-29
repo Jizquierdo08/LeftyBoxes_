@@ -1,7 +1,11 @@
+<?php
+    session_start();
+    $error = isset($_SESSION['error']) ? $_SESSION['error'] : false;
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    
     <meta charset="UTF-8">
     <title>Registro</title>
     <link rel="stylesheet" href="css/style-login.css">
@@ -15,9 +19,7 @@
 
     <link rel="stylesheet" href="css/style-footer.css">
     <script src="https://kit.fontawesome.com/f0f6311dd7.js" crossorigin="anonymous"></script>
-    
-
-
+    <script defer src="index.js"></script>
 </head>
 <body>
     <header class="header">
@@ -30,7 +32,7 @@
                 <i class="fas fa-bars"></i>
             </button>
             <ul class="nav-menu">
-                <li class="nav-menu-item"><a href="index.html" class="nav-menu-link nav-link">Inicio</a></li>
+                <li class="nav-menu-item"><a href="index.html" class="nav-menu-link nav-link ">Inicio</a></li>
                 <li class="nav-menu-item"><a href="productos.html" class="nav-menu-link nav-link">Productos</a></li>
 
                 <li class="nav-menu-item"><a href="contacto.html" class="nav-menu-link nav-link">Contacto</a></li>
@@ -51,34 +53,28 @@
                 </a>
                 </li>
             </ul>
-        </nav>           
-    </header> 
+        </nav>             
+    </header>
     <div class="background-container">
         <div class="card">
             <div class="card-body">
- 
-                <h1 class="title">REGISTRO</h1>
-                <form id="register-form" action="registrar.php" method="POST">
+                <h1 class="title">Bienvenido</h1>
+                <form id="login-form" action="validacion.php" method="POST">                
                     <div class="form-container">
-                        <input class="text-input"
-                            type="text" name="nombre" placeholder="Nombre" required>
-                        <input class="text-input"
-                            type="email" name="email" placeholder="Email" required>
-                        <input class="text-input" name="pass" 
-                            type="password" placeholder="Contraseña" min="6" max="10" required>
-                        <input class="text-input" name="conf_pass" 
-                            type="password" placeholder="Confirma contraseña"  min="6" max="10" required>
+                        <input class="text-input" name="email"                                                                                                                                                                  "
+                            type="text" placeholder="Email">
+                        <input class="text-input" name="pass"
+                            type="password" placeholder="Contraseña">
                     </div>
-                    <input class="submit-input" id="button-crear" name="crear"
-                        type="submit" value="Crear cuenta" >
+                    <input class="submit-input" 
+                        type="submit" value="Iniciar">
                 </form>
-                <p class="paragraph">
-                    ¿Ya tienes una cuenta?<a href="login.php">Log in</a>
-                </p>
             </div>
         </div>
 
     </div>
 </body>
-
 </html>
+<?php
+    $_SESSION['error'] = false;
+?>

@@ -12,13 +12,15 @@ img {
     height: 50px;
     width: 130px;
 }
+
 .header {
     background-color: white;
-    height: 180px;    
+    height: 120px;    
     width: 100%;    
     top: 0;
     left: 0;     
-    position: absolute;       
+    position: fixed;  
+    border-bottom: 1px solid #89aac0;       
 }
 
 .banner{
@@ -38,7 +40,7 @@ img {
 }
 
 .mensaje {
-    padding: 180px 0 0 0;
+    padding: 12% 0 0 0;
     text-align: center;
     color:#005078;
     font-size: 20px;    
@@ -50,8 +52,10 @@ img {
     height: 0;    
     align-items: center;
     width: 100%;
+    display: flex;
     position: absolute;
-    top: 83%;    
+    justify-content: center;
+    padding-top: 5%;
 }
 
 .buttons{
@@ -68,10 +72,13 @@ img {
 .firstbutton{
     padding-left: 75px;
 }
+
 .nav {
     display: flex;    
-    max-width: 992px;    
-    padding-top: 15px;      
+    max-width: 1500px;    
+    height: 85px;
+    padding-top: 5px;    
+    
 }
 
 .nav-link {
@@ -80,14 +87,24 @@ img {
 }
 
 .logo {
-    padding: 20px 40px 60px;
-    line-height: 80px;
+    padding: 10px 40px 60px 15px;
+    line-height: 85px;
+    align-content: right;
 }
 
 .nav-menu {
     display: flex;
-    margin-right: 60px;
-    list-style: none;        
+    margin-left: 230px;
+    list-style: none;  
+    align-content: center;      
+}
+
+.icons {
+    align-content: left;
+    display: flex;
+    margin-left: 178px;
+    list-style: none;  
+    align-items: center;      
 }
 
 .nav-menu-item {
@@ -97,6 +114,7 @@ img {
     text-transform: uppercase;
     width: max-content;
 }
+
 
 .nav-menu-link {
     padding: 8px 12px;
@@ -122,6 +140,41 @@ img {
     float: right;
 }
 
+.categorias {
+    padding-top: 3%;
+    padding-bottom: 3%;    
+    text-align: center;
+    color:#005078;
+    font-size: 20px;
+}
+
+.gallery {
+    border: 1px solid #ccc;
+}
+
+.gallery:hover {
+    border: 1px solid #777;
+}
+
+.gallery img {
+    width: 100%;
+    height: auto;
+}
+
+.desc {
+    padding: 15px;
+    text-align: center;
+}
+ 
+.responsive {
+    padding: 8px 10px;
+    float: left;
+    width: 24.99999%;
+}
+  
+
+
+
 @media (max-width: 768px){
     body{
         padding-top: 70px;
@@ -133,7 +186,9 @@ img {
     }
 
     .header {        
-        height: 60px;                  
+        share
+        height: 60px; 
+        position: fixed;          
     }
     .nav {
         background-color: white;
@@ -214,3 +269,23 @@ img {
         font-size: 20px;    
     }
 }
+
+
+@media only screen and (max-width: 700px) {
+    .responsive {
+     width: 49.99999%;
+     margin: 6px 0;
+   }
+ }
+   
+ @media only screen and (max-width: 500px) {
+    .responsive {
+     width: 100%;
+   }
+ }
+   
+   .clearfix:after {
+     content: "";
+     display: table;
+     clear: both;
+   }

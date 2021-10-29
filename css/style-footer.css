@@ -6,10 +6,12 @@
     text-decoration: none;
   }
 footer{
-    width: 100%;
+    width: 100%;    
+    margin-top: 80%; /*cambiar después*/
     bottom: 0;
     left: 0;
     background: #c0e0e8;
+    position: relative;    
   }
   footer .content{
     max-width: 1350px;

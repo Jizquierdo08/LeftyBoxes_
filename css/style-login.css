@@ -1,22 +1,24 @@
 * {
     margin: 0px;
     padding: 0px;
+    
 }
-
 .background-container {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-color: #cbdce9;
-    width: 100vw;
-    height: 100vh;
+    
+    width: 100%;
+    height: calc(100%-60px);
+    padding-top: 170px;
 }
 
 .card {
     background-color: white;
-    box-shadow: 0 4px 8px 0 rgb(0 0 0 / 38%), 0 2px 4px 0 rgb(0 0 0 / 18%);
-    width: 400px;
+    
+    width: 390px;
+    height: 440px;
 }
 
 .card-body {
@@ -24,19 +26,27 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    padding: 20px 20px;
+    padding: 10px 20px;
 }
 
 .card-body .title {
     color: #005078;
-    font-size: 28px;
-    font-weight: bold;
+    font-size: 35px;
+    font-weight: bolder;
     font-family: courier;
-    margin-bottom: 14px;
-    letter-spacing: -1.2px;
+    margin-bottom: 8px;
+    letter-spacing: -1px;
 }
 
 .card-body #register-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+.card-body #login-form {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -53,46 +63,49 @@
 }
 
 .card-body .form-container .text-input {
-    border: 1.5px solid #979797;
+    border: 1.3px solid #979797;
     border-radius: 7px;
-    font-size: 15px;
-    font-weight: normal;
+    font-size: 16px;
+    font-weight:lighter;
     margin-bottom: 17px;
-    width: 290px;
-    padding: 12px;
-    font-family: Arial, Helvetica, sans-serif;
+    width: 325px;
+    padding: 11px;
+    font-family:'Courier New', Courier, monospace;
     resize: none;
     color: #858383;
 }
 
-.card-body .form-container .textarea {
-    height: 100px;
-}
+
+
 
 
 .card-body .submit-input {
     border-radius: 4px;
-    font-size: 16px;
+    font-size: 17.1px;
+    letter-spacing: -0.5px;
     font-weight:bolder;
-    margin-bottom: 16px;
-    width: 205px;
-    padding: 11px;
-    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 60px;
+    margin-bottom: 20px;
+    width: 200px;
+    padding: 10px 9px;
+    font-family: courier;
     background-color: #135580;
     color: white;
     text-align: center;
     border: none;
     cursor: pointer;
-    transition: all 0.5s;
+    transition: all 0.3s;
 }
 
 .card-body .submit-input:hover {
-    background-color: #065484;
+    background-color: #0a68a3;
 }
+
+
 
 .card-body .paragraph {
     font-family: courier;
     font-size: 15px;
-    color:#222324;
-
+    color:#2e2f30;
 }
+
