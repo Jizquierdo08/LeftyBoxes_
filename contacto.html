@@ -7,6 +7,7 @@
     <title>LeftyBoxes - Contacto</title>
 
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style-contacto.css">
     <link rel="stylesheet" href="css/style-footer.css">
     <script src="https://kit.fontawesome.com/f0f6311dd7.js" crossorigin="anonymous"></script>
     <script defer src="index.js"></script>
@@ -58,24 +59,19 @@
                       type="text" name="nombre" placeholder="Nombre" required>
                   <input class="text-input"
                       type="email" name="email" placeholder="Email" required>
-                  <input class="text-input" name="pass" 
-                      type="password" placeholder="Contraseña" min="6" max="10" required>
-                  <input class="text-input" name="conf_pass" 
-                      type="password" placeholder="Confirma contraseña"  min="6" max="10" required>
+                  <textarea class="text-input textarea" required
+                      name="comentarios"
+                      placeholder="Comentarios">Comentarios</textarea>     
               </div>
-              <input class="submit-input" id="button-crear" name="crear"
-                  type="submit" value="Crear cuenta" >
+              <input class="submit-input" id="button-enciar" name="enviar"
+                  type="submit" value="Enviar" >
           </form>
-          <p class="paragraph">
-              ¿Ya tienes una cuenta?<a href="login.php">Log in</a>
-          </p>
+
       </div>
   </div>
 
 </div>
     
-
-
     <footer>
       <div class="content">
         <div class="left box">

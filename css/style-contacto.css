@@ -1,0 +1,107 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    
+}
+.background-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+    width: 100%;
+    height: calc(100%-60px);
+    padding-top: 170px;
+}
+
+.card {
+    background-color: white;
+    
+    width: 390px;
+    height: 440px;
+}
+
+.card-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px 20px;
+}
+
+.card-body .title {
+    color: #005078;
+    font-size: 35px;
+    font-weight: bolder;
+    font-family: courier;
+    margin-bottom: 8px;
+    letter-spacing: -1px;
+}
+
+.card-body #contacto-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+.card-body #contacto-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+.card-body .form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+.card-body .form-container .text-input {
+    border: 1.3px solid #979797;
+    border-radius: 7px;
+    font-size: 16px;
+    font-weight:lighter;
+    margin-bottom: 17px;
+    width: 325px;
+    padding: 11px;
+    font-family:'Courier New', Courier, monospace;
+    resize: none;
+    color: #858383;
+}
+
+
+.card-body .form-container .text-input textarea {
+    height: 100px;
+}
+
+
+
+.card-body .submit-input {
+    border-radius: 4px;
+    font-size: 17.1px;
+    letter-spacing: -0.5px;
+    font-weight:bolder;
+    margin-top: 20px;
+    width: 200px;
+    padding: 10px 9px;
+    font-family: courier;
+    background-color: #135580;
+    color: white;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.card-body .submit-input:hover {
+    background-color: #0a68a3;
+}
+
+
+
