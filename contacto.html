@@ -46,6 +46,33 @@
     </nav>   
     <div class="linea"></div>     
 </header>
+
+<div class="background-container">
+  <div class="card">
+      <div class="card-body">
+
+          <h1 class="title">Contáctanos</h1>
+          <form id="contacto-form" action="contactar.php" method="POST">
+              <div class="form-container">
+                  <input class="text-input"
+                      type="text" name="nombre" placeholder="Nombre" required>
+                  <input class="text-input"
+                      type="email" name="email" placeholder="Email" required>
+                  <input class="text-input" name="pass" 
+                      type="password" placeholder="Contraseña" min="6" max="10" required>
+                  <input class="text-input" name="conf_pass" 
+                      type="password" placeholder="Confirma contraseña"  min="6" max="10" required>
+              </div>
+              <input class="submit-input" id="button-crear" name="crear"
+                  type="submit" value="Crear cuenta" >
+          </form>
+          <p class="paragraph">
+              ¿Ya tienes una cuenta?<a href="login.php">Log in</a>
+          </p>
+      </div>
+  </div>
+
+</div>
     
 
 
